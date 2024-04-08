@@ -232,9 +232,13 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void btnDepositarSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositarSacarActionPerformed
         // TODO add your handling code here:
+        if(banco.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Cadastre uma conta primeiro");
+        }else{
         Saque saque = new Saque(banco);
         saque.setVisible(true);
         saque.setLocationRelativeTo(null);
+        }
     }//GEN-LAST:event_btnDepositarSacarActionPerformed
 
     private void txtSaldoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSaldoKeyTyped
